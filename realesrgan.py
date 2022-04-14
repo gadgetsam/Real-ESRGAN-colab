@@ -53,3 +53,6 @@ class RealESRGAN:
         sr_img = Image.fromarray(sr_img)
 
         return sr_img
+   def to(self, device):
+        self.device = device
+        self.model.to(device)
