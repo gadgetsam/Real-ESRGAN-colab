@@ -51,11 +51,9 @@ class RealESRGAN:
         sr_img = (np_sr_image*255).astype(np.uint8)
         sr_img = unpad_image(sr_img, pad_size*scale)
         sr_img = Image.fromarray(sr_img)
-
         return sr_img
 
-
-   def to(self, device):
+    def to(self, device):
         self.device = device
         self.model.to(device)
         return self
