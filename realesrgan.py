@@ -56,3 +56,4 @@ class RealESRGAN:
    def to(self, device):
         self.device = device
         self.model.to(device)
+        return self
